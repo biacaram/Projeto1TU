@@ -23,7 +23,7 @@ namespace Projeto1TU.Models
         [Required(ErrorMessage = "Campo obrigatório.")]
         public string Cpf { get; set; }
 
-        [Required(ErrorMessage = "Campo obrigatório.")]
+        //[Required(ErrorMessage = "Campo obrigatório.")]
         public DateTime Nascimento { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório.")]
@@ -59,7 +59,7 @@ namespace Projeto1TU.Models
         public string Cidade { get; set; }
 
         [Display(Name = "Estado")]
-        [Required(ErrorMessage = "Campo obrigatório.")]
+        //[Required(ErrorMessage = "Campo obrigatório.")]
         public int EstadoID { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório.")]
