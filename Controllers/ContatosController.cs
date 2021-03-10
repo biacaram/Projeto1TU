@@ -10,6 +10,7 @@ namespace Projeto1TU.Controllers
 {
     public class ContatosController : Controller
     {
+
         // GET: Contatos
         public ActionResult Index(string query = null)
         {
@@ -52,7 +53,8 @@ namespace Projeto1TU.Controllers
         // GET: Contatos/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            //var cnt = contatoList.Where(c => c.ID == id).FirstOrDefault();
+            return View(/*cnt*/);
         }
 
         // POST: Contatos/Edit/5
