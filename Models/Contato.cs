@@ -32,6 +32,7 @@ namespace Projeto1TU.Models
         [Required(ErrorMessage = "Campo obrigatório.")]
         public string Telefone { get; set; }
 
+        [EmailAddress]
         [Required(ErrorMessage = "Campo obrigatório.")]
         public string Email { get; set; }
 
