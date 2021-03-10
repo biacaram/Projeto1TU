@@ -1,0 +1,49 @@
+﻿@model Projeto1TU.Models.TesteViewModel
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Model.Titulo</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <a id="btnPesquisa" class="btn btn-success" href="#">Pequisar</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @Html.TextBox("Descricao", "", new { id = "descricao" })
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table id="tbteste" class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.ListaTeste)
+                {
+                    <tr>
+                        <td id="nome">@item.Nome</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $('#btnPesquisa').click(function () {
+            var url = '@Url.Action("Index","Teste")' + '?query=' + $('#descricao').val();
+            window.location.href = url;
+        });
+    </script>
+}

@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4">
+            <a href="@Url.Action("Index", "Contatos")" class="btn btn-info">Pesquisar</a>
+        </div>
+        <div class="col-md-4">
+            <a href="@Url.Action("Create", "Contatos")" class="btn btn-warning">Novo contato</a>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-success" href="@Url.Action("Index", "Teste")">Teste</a>
+        </div>
+    </div>
+
+</div>
