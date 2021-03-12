@@ -11,7 +11,7 @@ namespace Projeto1TU.Data
     {
         public IList<Contato> PesquisaAll(string query)
         {
-            var db = new Database("PRWDEV");
+            Database db = new PetaPoco.Database("PRWDEV");
             var result = db.Fetch<Contato>("Select Nome = nome FROM brunateste WHERE nome = '%@query%'", new { query });
 
             return result;
