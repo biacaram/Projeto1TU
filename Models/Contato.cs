@@ -24,6 +24,8 @@ namespace Projeto1TU.Models
         public string Cpf { get; set; }
 
         //[Required(ErrorMessage = "Campo obrigatório.")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Nascimento { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório.")]

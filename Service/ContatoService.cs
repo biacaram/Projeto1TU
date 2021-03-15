@@ -14,5 +14,7 @@ namespace Projeto1TU.Service
             var result = new ContatoRepository();
             return result.PesquisaAll(query);
         }
+
+
     }
 }

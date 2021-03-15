@@ -11,25 +11,6 @@ namespace Projeto1TU.Controllers
     public class ContatosController : Controller
     {
 
-        public IList<Contato> ListaContato = new List<Contato>{
-                new Contato(){  ID = 1,
-                                Nome = "Beatriz",
-                                Apelido = "Bia",
-                                Cpf = "99999999600",
-                                Sexo = "F",
-                                Telefone = "31999231447",
-                                Email = "biacaram@hotmail.com",
-                                Cep = "30170081",
-                                Endereco = "Rua Santa Catarina",
-                                Numero = "1447",
-                                Complemento = "701",
-                                Bairro = "Lourdes",
-                                Cidade = "BH",
-                                EstadoID = "1",
-                                Ativo = true
-                              },
-            };
-
         // GET: Contatos
         public ActionResult Index(string query = null)
         {
@@ -55,12 +36,11 @@ namespace Projeto1TU.Controllers
 
         // POST: Contatos/Create
         [HttpPost]
-        public ActionResult Create(ContatoViewModel model)
+        public ActionResult Create(Contato newContato)
         {
             if (ModelState.IsValid)
             {
-                //db.Contatos.Add(contato);
-                //db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 

@@ -7,9 +7,9 @@
 <h2>Novo Contato</h2>
 
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken() //Generates a hidden form field (anti-forgery token) that is validated when the form is submitted
+<form id="survey-form" action="@Url.Action("Create","Contatos")" method="POST">
+
+    @Html.AntiForgeryToken() 
 
     <div class="form-horizontal">
         <hr />
@@ -146,20 +146,20 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Adicionar" class="btn btn-warning" />
+                <button type="submit" class="btn btn-warning">Adicionar</button>
             </div>
         </div>
     </div>
-}
+</form>
 
-@section Scripts {
+    @section Scripts {
 
-    <script>
-        $(document).ready(function () {
-            $("#phone").inputmask("mask", { "mask": "(99) 99999-9999" });
-            $("#cpf").inputmask("mask", { "mask": "999.999.999-99" });
-            $("#cep").inputmask("mask", { "mask": "99.999-999" });
-        });
-    </script>
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        <script>
+            $(document).ready(function () {
+                $("#phone").inputmask("mask", { "mask": "(99) 99999-9999" });
+                $("#cpf").inputmask("mask", { "mask": "999.999.999-99" });
+                $("#cep").inputmask("mask", { "mask": "99.999-999" });
+            });
+        </script>
+        @Scripts.Render("~/bundles/jqueryval")
+    }

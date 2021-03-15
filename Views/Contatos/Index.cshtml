@@ -5,7 +5,6 @@
 }
 
 <h2>Index</h2>
-<p>@Html.DisplayForLista.Contato</p>
 
 <p>Pesquisar por: </p>
 
@@ -23,11 +22,11 @@
     @foreach (var item in Model.ListaContato)
     {
         <tr>
-            <td>@Html.DisplayFor(modelItem => item.Nome) </td>
-            <td> @Html.DisplayFor(modelItem => item.Email) </td>
-            <td> @Html.DisplayFor(modelItem => item.Nascimento) </td>
-            <td> @Html.DisplayFor(modelItem => item.Cidade) </td>
-            <td>  @Html.DisplayFor(modelItem => item.Ativo) </td>
+            <td>@item.Nome </td>
+            <td> @item.Email </td>
+            <td> @item.Nascimento </td>
+            <td> @item.Cidade </td>
+            <td> @item.Ativo </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.ID }) |

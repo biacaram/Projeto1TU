@@ -12,7 +12,7 @@ namespace Projeto1TU.Data
         public IList<Contato> PesquisaAll(string query)
         {
             Database db = new PetaPoco.Database("PRWDEV");
-            var result = db.Fetch<Contato>("Select Nome = nome FROM contatosbandre WHERE nome = '%@query%'", new { query });
+            var result = db.Fetch<Contato>("Select * FROM contatosbandre");
 
             return result;
         }
