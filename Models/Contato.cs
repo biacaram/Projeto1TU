@@ -9,7 +9,7 @@ namespace Projeto1TU.Models
     public class Contato
     {
         [Required]
-        public Guid ID { get; set; }
+        public int ID { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório.")]
         [StringLength(100, ErrorMessage = "O nome não pode exceder 100 caracteres.")]

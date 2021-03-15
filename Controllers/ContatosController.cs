@@ -11,6 +11,25 @@ namespace Projeto1TU.Controllers
     public class ContatosController : Controller
     {
 
+        static IList<Contato> contatoList = new List<Contato> {
+                                new Contato() {  ID = 1,
+                                Nome = "Beatriz",
+                                Apelido = "Bia",
+                                Cpf = "99999999600",
+                                Sexo = "F",
+                                Telefone = "31999231447",
+                                Email = "biacaram@hotmail.com",
+                                Cep = "30170081",
+                                Endereco = "Rua Santa Catarina",
+                                Numero = "1447",
+                                Complemento = "701",
+                                Bairro = "Lourdes",
+                                Cidade = "BH",
+                                EstadoID = "1",
+                                Ativo = true
+                                },
+        };
+
         // GET: Contatos
         public ActionResult Index(string query = null)
         {
