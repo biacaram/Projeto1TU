@@ -59,7 +59,7 @@ namespace Projeto1TU.Controllers
         {
             if (ModelState.IsValid)
             {
-                //db.ListaContato.Add(contato);
+                //db.Contatos.Add(contato);
                 //db.SaveChanges();
                 return RedirectToAction("Index");
             }

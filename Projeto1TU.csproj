@@ -136,6 +136,7 @@
     </Compile>
     <Compile Include="Models\Contato.cs" />
     <Compile Include="Models\ContatoViewModel.cs" />
+    <Compile Include="Models\Estado.cs" />
     <Compile Include="Models\Teste.cs" />
     <Compile Include="Models\TesteViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
