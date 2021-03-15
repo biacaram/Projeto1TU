@@ -25,7 +25,9 @@ namespace Projeto1TU.Controllers
         // GET: Contatos/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var db = new PetaPoco.Database("PRWDEV");
+            var contato = db.Single<Contato>("Select * from contatosbandre where ID=@0", id);
+            return View(contato);
         }
 
         // GET: Contatos/Create
