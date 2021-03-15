@@ -36,11 +36,10 @@ namespace Projeto1TU.Controllers
 
         // POST: Contatos/Create
         [HttpPost]
-        public ActionResult Create(Contato newContato)
+        public ActionResult Create(Contato novoContato)
         {
             if (ModelState.IsValid)
             {
-
                 return RedirectToAction("Index");
             }
 
