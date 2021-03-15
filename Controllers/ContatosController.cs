@@ -11,8 +11,8 @@ namespace Projeto1TU.Controllers
     public class ContatosController : Controller
     {
 
-        static IList<Contato> contatoList = new List<Contato> {
-                                new Contato() {  ID = 1,
+        public IList<Contato> ListaContato = new List<Contato>{
+                new Contato(){  ID = 1,
                                 Nome = "Beatriz",
                                 Apelido = "Bia",
                                 Cpf = "99999999600",
@@ -27,8 +27,8 @@ namespace Projeto1TU.Controllers
                                 Cidade = "BH",
                                 EstadoID = "1",
                                 Ativo = true
-                                },
-        };
+                              },
+            };
 
         // GET: Contatos
         public ActionResult Index(string query = null)
@@ -55,18 +55,16 @@ namespace Projeto1TU.Controllers
 
         // POST: Contatos/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ContatoViewModel model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                //db.ListaContato.Add(contato);
+                //db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View();
         }
 
         // GET: Contatos/Edit/5
