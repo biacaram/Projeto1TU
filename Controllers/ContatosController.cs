@@ -36,18 +36,15 @@ namespace Projeto1TU.Controllers
 
         // POST: Contatos/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Contato newContato)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View();
         }
 
         // GET: Contatos/Edit/5

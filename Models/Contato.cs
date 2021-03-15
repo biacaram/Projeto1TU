@@ -9,7 +9,7 @@ namespace Projeto1TU.Models
     public class Contato
     {
         [Required]
-        public Guid ID { get; set; }
+        public int ID { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório.")]
         [StringLength(100, ErrorMessage = "O nome não pode exceder 100 caracteres.")]
@@ -24,6 +24,8 @@ namespace Projeto1TU.Models
         public string Cpf { get; set; }
 
         //[Required(ErrorMessage = "Campo obrigatório.")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Nascimento { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório.")]
