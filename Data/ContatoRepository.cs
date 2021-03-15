@@ -20,7 +20,7 @@ namespace Projeto1TU.Data
         public void Insert(Contato novoContato)
         {
             Database db = new PetaPoco.Database("PRWDEV");
-            db.Insert("Contato", "ID", novoContato);
+            db.Insert("contatosbandre", "ID", novoContato);
         }
 
     }

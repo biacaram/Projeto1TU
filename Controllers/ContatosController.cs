@@ -40,6 +40,8 @@ namespace Projeto1TU.Controllers
         {
             if (ModelState.IsValid)
             {
+                var contatoService = new ContatoService();
+                contatoService.Insert(novoContato);
                 return RedirectToAction("Index");
             }
 

@@ -25,7 +25,7 @@ namespace Projeto1TU.Models
 
         //[Required(ErrorMessage = "Campo obrigatório.")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Nascimento { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório.")]
@@ -50,7 +50,7 @@ namespace Projeto1TU.Models
         [Required(ErrorMessage = "Campo obrigatório.")]
         public string Numero { get; set; }
 
-        [Required(ErrorMessage = "Campo obrigatório.")]
+        //[Required(ErrorMessage = "Campo obrigatório.")]
         [StringLength(20, ErrorMessage = "O complemento não pode exceder 20 caracteres.")]
         public string Complemento { get; set; }
 
