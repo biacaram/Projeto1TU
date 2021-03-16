@@ -4,10 +4,17 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Deletar o contato abaixo?</h2>
+<h2 class="text-danger">Deletar o contato abaixo?</h2>
 
 <p>Nome: @Html.DisplayFor(model => model.Nome)</p>
 <p>Apelido: @Html.DisplayFor(model => model.Apelido)</p>
 <p>CPF: @Html.DisplayFor(model => model.Cpf)</p>
 
 @Html.ActionLink("Index", "Index")
+
+@using (Html.BeginForm("Delete", "Contatos", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.ID)
+
+    <button type="submit" class="btn btn-danger" value="Delete">Delete</button>
+}

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Projeto1TU.Models;
 using Projeto1TU.Service;
+using PetaPoco;
 
 namespace Projeto1TU.Controllers
 {
@@ -53,8 +54,9 @@ namespace Projeto1TU.Controllers
         // GET: Contatos/Edit/5
         public ActionResult Edit(int id)
         {
-            // var cnt = contatoList.Where(c => c.ID == id).FirstOrDefault();
-            return View(/*cnt*/);
+            var db = new PetaPoco.Database("PRWDEV");
+            var contato = db.Single<Contato>("Select * from contatosbandre where ID=@0", id);
+            return View(contato);
         }
 
         // POST: Contatos/Edit/5
@@ -89,6 +91,7 @@ namespace Projeto1TU.Controllers
             {
                 var db = new PetaPoco.Database("PRWDEV");
                 db.Delete<Contato>(id);
+                db.Save("contatosbandre", "ID", db);
                 return RedirectToAction("Index");
             }
             catch
