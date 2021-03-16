@@ -61,12 +61,12 @@ namespace Projeto1TU.Controllers
 
         // POST: Contatos/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Contato contato)
         {
             try
             {
-                // TODO: Add update logic here
-
+                var db = new PetaPoco.Database("PRWDEV");
+                db.Update("contatosbandre", "ID", contato);
                 return RedirectToAction("Index");
             }
             catch
