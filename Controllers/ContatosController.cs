@@ -76,7 +76,9 @@ namespace Projeto1TU.Controllers
         // GET: Contatos/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var db = new PetaPoco.Database("PRWDEV");
+            var contato = db.Single<Contato>("Select * from contatosbandre where ID=@0", id);
+            return View(contato);
         }
 
         // POST: Contatos/Delete/5
@@ -85,8 +87,8 @@ namespace Projeto1TU.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
-
+                var db = new PetaPoco.Database("PRWDEV");
+                db.Delete<Contato>(id);
                 return RedirectToAction("Index");
             }
             catch
