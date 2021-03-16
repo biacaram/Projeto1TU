@@ -19,7 +19,7 @@ namespace Projeto1TU.Data
             } 
             else
             {
-               return db.Fetch<Contato>("Select * FROM contatosbandre WHERE nome like '%' + @query + '%'", new { query });
+               return db.Fetch<Contato>("Select * FROM contatosbandre WHERE nome like '%' + @query + '%' or cpf like '%' + @query + '%'", new { query });
             }
         }
 
