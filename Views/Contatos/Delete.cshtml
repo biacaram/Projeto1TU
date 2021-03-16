@@ -4,13 +4,14 @@
     ViewBag.Title = "Delete";
 }
 
-<h2 class="text-danger">Deletar o contato abaixo?</h2>
+<h3 class="text-danger">Tem certeza que quer deletar este contato?</h3>
 
 <p>Nome: @Html.DisplayFor(model => model.Cnt.Nome)</p>
 <p>Apelido: @Html.DisplayFor(model => model.Cnt.Apelido)</p>
 <p>CPF: @Html.DisplayFor(model => model.Cnt.Cpf)</p>
+<p>Email: @Html.DisplayFor(model => model.Cnt.Email)</p>
+<p>Ativo: @Html.DisplayFor(model => model.Cnt.Ativo)</p>
 
-@Html.ActionLink("Index", "Index")
 
 @using (Html.BeginForm("Delete", "Contatos", FormMethod.Post))
 {
@@ -18,3 +19,5 @@
 
     <button type="submit" class="btn btn-danger" value="Delete">Delete</button>
 }
+<br />
+@Html.ActionLink("Voltar", "Index", "Contatos", new { @class = "btn btn-success" })
