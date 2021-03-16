@@ -20,5 +20,23 @@ namespace Projeto1TU.Service
             var result = new ContatoRepository();
             result.Insert(novoContato);
         }
+
+        public Contato Find(int id)
+        {
+            var result = new ContatoRepository();
+            return result.Find(id);
+        }
+
+        public void Update(Contato contato)
+        {
+            var result = new ContatoRepository();
+            result.Update(contato);
+        }
+
+        public void Delete(Contato contato)
+        {
+            var result = new ContatoRepository();
+            result.Delete(contato);
+        }
     }
 }

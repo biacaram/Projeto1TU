@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Projeto1TU.Models;
 using Projeto1TU.Service;
+using PetaPoco;
 
 namespace Projeto1TU.Controllers
 {
@@ -53,18 +54,22 @@ namespace Projeto1TU.Controllers
         // GET: Contatos/Edit/5
         public ActionResult Edit(int id)
         {
-            // var cnt = contatoList.Where(c => c.ID == id).FirstOrDefault();
-            return View(/*cnt*/);
+            var tela = new ContatoViewModel();
+            var contatoService = new ContatoService();
+            tela.Cnt = contatoService.Find(id);
+            tela.Titulo = "Editar contato";
+            return View(tela);
+
         }
 
         // POST: Contatos/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Contato contato)
         {
             try
             {
-                // TODO: Add update logic here
-
+                var contatoService = new ContatoService();
+                contatoService.Update(contato);
                 return RedirectToAction("Index");
             }
             catch
@@ -76,19 +81,21 @@ namespace Projeto1TU.Controllers
         // GET: Contatos/Delete/5
         public ActionResult Delete(int id)
         {
-            var db = new PetaPoco.Database("PRWDEV");
-            var contato = db.Single<Contato>("Select * from contatosbandre where ID=@0", id);
-            return View(contato);
+            var tela = new ContatoViewModel();
+            var contatoService = new ContatoService();
+            tela.Cnt = contatoService.Find(id);
+            tela.Titulo = "Deletar contato";
+            return View(tela);
         }
 
         // POST: Contatos/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(Contato contato)
         {
             try
             {
-                var db = new PetaPoco.Database("PRWDEV");
-                db.Delete<Contato>(id);
+                var contatoService = new ContatoService();
+                contatoService.Delete(contato);
                 return RedirectToAction("Index");
             }
             catch

@@ -8,6 +8,7 @@ namespace Projeto1TU.Models
     public class ContatoViewModel
     {
         public IList<Contato> ListaContato { get; set; }
+        public Contato Cnt { get; set; }
         public string Titulo { get; set; }
     }
 }

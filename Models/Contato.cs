@@ -25,7 +25,7 @@ namespace Projeto1TU.Models
 
         //[Required(ErrorMessage = "Campo obrigatório.")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        //[DisplayFormat(DataFormatString = "{dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Nascimento { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório.")]

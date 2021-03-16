@@ -4,13 +4,26 @@
     ViewBag.Title = "Details";
 }
 
-@Html.ActionLink("Index", "Index")
 
 <h2>Details</h2>
+<hr />
 
 <p>ID: @Html.DisplayFor(model => model.ID)</p>
 <p>Nome: @Html.DisplayFor(model => model.Nome)</p>
 <p>Apelido: @Html.DisplayFor(model => model.Apelido)</p>
 <p>CPF: @Html.DisplayFor(model => model.Cpf)</p>
+<p>Nascimento: @Html.DisplayFor(model => model.Nascimento)</p>
 <p>Sexo: @Html.DisplayFor(model => model.Sexo)</p>
 <p>Telefone: @Html.DisplayFor(model => model.Telefone)</p>
+<p>Email: @Html.DisplayFor(model => model.Email)</p>
+<p>CEP: @Html.DisplayFor(model => model.Cep)</p>
+<p>Endereço: @Html.DisplayFor(model => model.Endereco)<p>
+<p>Número: @Html.DisplayFor(model => model.Numero)</p>
+<p>Complemento: @Html.DisplayFor(model => model.Complemento)</p>
+<p>Bairro: @Html.DisplayFor(model => model.Bairro)</p>
+<p>Cidade: @Html.DisplayFor(model => model.Cidade)</p>
+<p>Estado: @Html.DisplayFor(model => model.EstadoID)</p>
+<p>Ativo: @Html.DisplayFor(model => model.Ativo)</p>
+<br />
+
+@Html.ActionLink("<< Index", "Index")
