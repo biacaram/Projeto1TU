@@ -5,25 +5,80 @@
 }
 
 
-<h2>Details</h2>
-<hr />
+<h2>Dados do Contato</h2>
 
-<p>ID: @Html.DisplayFor(model => model.ID)</p>
-<p>Nome: @Html.DisplayFor(model => model.Nome)</p>
-<p>Apelido: @Html.DisplayFor(model => model.Apelido)</p>
-<p>CPF: @Html.DisplayFor(model => model.Cpf)</p>
-<p>Nascimento: @Html.DisplayFor(model => model.Nascimento)</p>
-<p>Sexo: @Html.DisplayFor(model => model.Sexo)</p>
-<p>Telefone: @Html.DisplayFor(model => model.Telefone)</p>
-<p>Email: @Html.DisplayFor(model => model.Email)</p>
-<p>CEP: @Html.DisplayFor(model => model.Cep)</p>
-<p>Endereço: @Html.DisplayFor(model => model.Endereco)<p>
-<p>Número: @Html.DisplayFor(model => model.Numero)</p>
-<p>Complemento: @Html.DisplayFor(model => model.Complemento)</p>
-<p>Bairro: @Html.DisplayFor(model => model.Bairro)</p>
-<p>Cidade: @Html.DisplayFor(model => model.Cidade)</p>
-<p>Estado: @Html.DisplayFor(model => model.EstadoID)</p>
-<p>Ativo: @Html.DisplayFor(model => model.Ativo)</p>
+<div class="row">
+    <div class="col-md-6">
+        <table class="table">
+            <tr>
+                <td><strong>ID</strong></td>
+                <td>@Html.DisplayFor(model => model.ID)</td>
+            </tr>
+            <tr>
+                <td><strong>Nome</strong></td>
+                <td>@Html.DisplayFor(model => model.Nome)</td>
+            </tr>
+            <tr>
+                <td><strong>Apelido</strong></td>
+                <td>@Html.DisplayFor(model => model.Apelido)</td>
+            </tr>
+            <tr>
+                <td><strong>CPF</strong></td>
+                <td>@Html.DisplayFor(model => model.Cpf)</td>
+            </tr>
+            <tr>
+                <td><strong>Nascimento</strong></td>
+                <td>@Html.DisplayFor(model => model.Nascimento)</td>
+            </tr>
+            <tr>
+                <td><strong>Sexo</strong></td>
+                <td>@Html.DisplayFor(model => model.Sexo)</td>
+            </tr>
+            <tr>
+                <td><strong>Telefone</strong></td>
+                <td>@Html.DisplayFor(model => model.Telefone)</td>
+            </tr>
+            <tr>
+                <td><strong>Email</strong></td>
+                <td>@Html.DisplayFor(model => model.Email)</td>
+            </tr>
+            <tr>
+                <td><strong>CEP</strong></td>
+                <td>@Html.DisplayFor(model => model.Cep)</td>
+            </tr>
+            <tr>
+                <td><strong>Endereço</strong></td>
+                <td>@Html.DisplayFor(model => model.Endereco)</td>
+            </tr>
+            <tr>
+                <td><strong>Nº</strong></td>
+                <td>@Html.DisplayFor(model => model.Numero)</td>
+            </tr>
+            <tr>
+                <td><strong>Complemento</strong></td>
+                <td>@Html.DisplayFor(model => model.Complemento)</td>
+            </tr>
+            <tr>
+                <td><strong>Bairro</strong></td>
+                <td>@Html.DisplayFor(model => model.Bairro)</td>
+            </tr>
+            <tr>
+                <td><strong>Cidade</strong></td>
+                <td>@Html.DisplayFor(model => model.Cidade)</td>
+            </tr>
+            <tr>
+                <td><strong>Estado</strong></td>
+                <td>@Html.DisplayFor(model => model.EstadoID)</td>
+            </tr>
+            <tr>
+                <td><strong>Ativo</strong></td>
+                <td>@Html.DisplayFor(model => model.Ativo)</td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
 <br />
 
 @Html.ActionLink("Voltar", "Index", "Contatos", new { @class = "btn btn-success" })

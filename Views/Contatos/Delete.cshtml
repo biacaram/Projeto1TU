@@ -5,19 +5,20 @@
 }
 
 <h3 class="text-danger">Tem certeza que quer deletar este contato?</h3>
+<hr />
 
-<p>Nome: @Html.DisplayFor(model => model.Cnt.Nome)</p>
-<p>Apelido: @Html.DisplayFor(model => model.Cnt.Apelido)</p>
-<p>CPF: @Html.DisplayFor(model => model.Cnt.Cpf)</p>
-<p>Email: @Html.DisplayFor(model => model.Cnt.Email)</p>
-<p>Ativo: @Html.DisplayFor(model => model.Cnt.Ativo)</p>
+<p><strong>Nome: </strong> @Html.DisplayFor(model => model.Cnt.Nome)</p>
+<p><strong>Apelido: </strong> @Html.DisplayFor(model => model.Cnt.Apelido)</p>
+<p><strong>CPF: </strong> @Html.DisplayFor(model => model.Cnt.Cpf)</p>
+<p><strong>Email: </strong> @Html.DisplayFor(model => model.Cnt.Email)</p>
+<p><strong>Ativo: </strong> @Html.DisplayFor(model => model.Cnt.Ativo)</p>
 
 
 @using (Html.BeginForm("Delete", "Contatos", FormMethod.Post))
 {
     @Html.HiddenFor(model => model.Cnt.ID)
     <div class="form-group">
-        <div class="col-md-10">
+        <div class="col-md-4">
             <button type="submit" class="btn btn-danger" value="Delete">Delete</button>
             @Html.ActionLink("Voltar", "Index", "Contatos", new { @class = "btn btn-success" })
         </div>
