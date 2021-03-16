@@ -1,4 +1,4 @@
-﻿@model Projeto1TU.Models.Contato
+﻿@model Projeto1TU.Models.ContatoViewModel
 
 @{
     ViewBag.Title = "Delete";
@@ -6,15 +6,15 @@
 
 <h2 class="text-danger">Deletar o contato abaixo?</h2>
 
-<p>Nome: @Html.DisplayFor(model => model.Nome)</p>
-<p>Apelido: @Html.DisplayFor(model => model.Apelido)</p>
-<p>CPF: @Html.DisplayFor(model => model.Cpf)</p>
+<p>Nome: @Html.DisplayFor(model => model.Cnt.Nome)</p>
+<p>Apelido: @Html.DisplayFor(model => model.Cnt.Apelido)</p>
+<p>CPF: @Html.DisplayFor(model => model.Cnt.Cpf)</p>
 
 @Html.ActionLink("Index", "Index")
 
 @using (Html.BeginForm("Delete", "Contatos", FormMethod.Post))
 {
-    @Html.HiddenFor(model => model.ID)
+    @Html.HiddenFor(model => model.Cnt.ID)
 
     <button type="submit" class="btn btn-danger" value="Delete">Delete</button>
 }
