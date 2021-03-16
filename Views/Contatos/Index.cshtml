@@ -8,11 +8,20 @@
 
 <p>Pesquisar por: </p>
 
-<select name="pesquisa" id="pesquisa">
+<select name="pesquisa" class="form-control" id="pesquisa">
     <option value="nome">Nome</option>
     <option value="cpf">CPF</option>
     <option value="estado">Estado</option>
 </select>
+<br />
+@Html.TextBox("Descricao", "", new { id = "descricao", @class = "form-control" })
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <a id="btnPesquisa" class="btn btn-info" href="#">Pequisar</a>
+    </div>
+</div>
 
 
 <h2>Clientes </h2>
@@ -32,20 +41,30 @@
             <tbody>
                 @foreach (var item in Model.ListaContato)
                 {
-                <tr>
-                    <td id="nome">@item.Nome</td>
-                    <td> @item.Email </td>
-                    <td> @item.Apelido </td>
-                    <td> @item.Cidade </td>
-                    <td> @item.Ativo </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                    </td>
-                </tr>
+                    <tr>
+                        <td id="nome">@item.Nome</td>
+                        <td> @item.Email </td>
+                        <td> @item.Apelido </td>
+                        <td> @item.Cidade </td>
+                        <td> @item.Ativo </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>
     </div>
 </div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $('#btnPesquisa').click(function () {
+            var url = '@Url.Action("Index","Contatos")' + '?query=' + $('#descricao').val();
+            window.location.href = url;
+        });
+    </script>
+}
