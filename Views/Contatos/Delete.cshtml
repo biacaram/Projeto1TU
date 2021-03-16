@@ -1,0 +1,13 @@
+﻿@model Projeto1TU.Models.Contato
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar o contato abaixo?</h2>
+
+<p>Nome: @Html.DisplayFor(model => model.Nome)</p>
+<p>Apelido: @Html.DisplayFor(model => model.Apelido)</p>
+<p>CPF: @Html.DisplayFor(model => model.Cpf)</p>
+
+@Html.ActionLink("Index", "Index")

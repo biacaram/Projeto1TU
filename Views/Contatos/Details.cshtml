@@ -4,12 +4,13 @@
     ViewBag.Title = "Details";
 }
 
+@Html.ActionLink("Index", "Index")
+
 <h2>Details</h2>
 
 <p>ID: @Html.DisplayFor(model => model.ID)</p>
 <p>Nome: @Html.DisplayFor(model => model.Nome)</p>
 <p>Apelido: @Html.DisplayFor(model => model.Apelido)</p>
 <p>CPF: @Html.DisplayFor(model => model.Cpf)</p>
-<p>Nascimento: @Html.DisplayFor(model => model.Nascimento)</p>
 <p>Sexo: @Html.DisplayFor(model => model.Sexo)</p>
 <p>Telefone: @Html.DisplayFor(model => model.Telefone)</p>

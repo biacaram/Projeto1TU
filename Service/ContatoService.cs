@@ -15,6 +15,10 @@ namespace Projeto1TU.Service
             return result.PesquisaAll(query);
         }
 
-
+        public void Insert(Contato novoContato)
+        {
+            var result = new ContatoRepository();
+            result.Insert(novoContato);
+        }
     }
 }

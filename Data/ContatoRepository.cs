@@ -16,5 +16,14 @@ namespace Projeto1TU.Data
 
             return result;
         }
+
+
+
+        public void Insert(Contato novoContato)
+        {
+            Database db = new PetaPoco.Database("PRWDEV");
+            db.Insert("contatosbandre", "ID", novoContato);
+        }
+
     }
 }

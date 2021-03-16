@@ -25,7 +25,9 @@ namespace Projeto1TU.Controllers
         // GET: Contatos/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var db = new PetaPoco.Database("PRWDEV");
+            var contato = db.Single<Contato>("Select * from contatosbandre where ID=@0", id);
+            return View(contato);
         }
 
         // GET: Contatos/Create
@@ -36,11 +38,12 @@ namespace Projeto1TU.Controllers
 
         // POST: Contatos/Create
         [HttpPost]
-        public ActionResult Create(Contato newContato)
+        public ActionResult Create(Contato novoContato)
         {
             if (ModelState.IsValid)
             {
-
+                var contatoService = new ContatoService();
+                contatoService.Insert(novoContato);
                 return RedirectToAction("Index");
             }
 
@@ -73,7 +76,9 @@ namespace Projeto1TU.Controllers
         // GET: Contatos/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var db = new PetaPoco.Database("PRWDEV");
+            var contato = db.Single<Contato>("Select * from contatosbandre where ID=@0", id);
+            return View(contato);
         }
 
         // POST: Contatos/Delete/5
@@ -82,8 +87,8 @@ namespace Projeto1TU.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
-
+                var db = new PetaPoco.Database("PRWDEV");
+                db.Delete<Contato>(id);
                 return RedirectToAction("Index");
             }
             catch
