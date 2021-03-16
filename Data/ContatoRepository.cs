@@ -23,10 +23,12 @@ namespace Projeto1TU.Data
             db.Insert("contatosbandre", "ID", novoContato);
         }
 
-        public void Update(Contato contato)
+        public Contato Edit(int id)
         {
             Database db = new PetaPoco.Database("PRWDEV");
-            db.Update(contato);
+            var contato = db.First<Contato>("Select * from contatosbandre where ID=@0", id);
+
+            return contato;
         }
 
     }
