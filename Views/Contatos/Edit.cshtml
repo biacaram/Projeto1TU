@@ -4,14 +4,12 @@
     ViewBag.Title = "Edit";
 }
 
-@Html.ActionLink("Index", "Index")
 
 <h2>Editar Contato</h2>
 
-
 <form id="edit-form" action="@Url.Action("Edit","Contatos")" method="POST">
 
-    @Html.AntiForgeryToken() 
+    @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
         <hr />
@@ -158,19 +156,21 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <button type="submit" class="btn btn-warning" value="Edit">Salvar</button>
+                @Html.ActionLink("Voltar", "Index", "Contatos", new { @class = "btn btn-success" })
             </div>
         </div>
     </div>
 </form>
 
-    @section Scripts {
 
-        <script>
-            $(document).ready(function () {
-                $("#phone").inputmask("mask", { "mask": "(99) 99999-9999" });
-                $("#cpf").inputmask("mask", { "mask": "999.999.999-99" });
-                $("#cep").inputmask("mask", { "mask": "99.999-999" });
-            });
-        </script>
-        @Scripts.Render("~/bundles/jqueryval")
-    }
+@section Scripts {
+
+    <script>
+        $(document).ready(function () {
+            $("#phone").inputmask("mask", { "mask": "(99) 99999-9999" });
+            $("#cpf").inputmask("mask", { "mask": "999.999.999-99" });
+            $("#cep").inputmask("mask", { "mask": "99.999-999" });
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

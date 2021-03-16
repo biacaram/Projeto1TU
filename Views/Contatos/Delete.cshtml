@@ -16,8 +16,11 @@
 @using (Html.BeginForm("Delete", "Contatos", FormMethod.Post))
 {
     @Html.HiddenFor(model => model.Cnt.ID)
-
-    <button type="submit" class="btn btn-danger" value="Delete">Delete</button>
+    <div class="form-group">
+        <div class="col-md-10">
+            <button type="submit" class="btn btn-danger" value="Delete">Delete</button>
+            @Html.ActionLink("Voltar", "Index", "Contatos", new { @class = "btn btn-success" })
+        </div>
+    </div>
 }
 <br />
-@Html.ActionLink("Voltar", "Index", "Contatos", new { @class = "btn btn-success" })
