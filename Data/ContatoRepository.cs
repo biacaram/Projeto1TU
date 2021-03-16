@@ -31,5 +31,11 @@ namespace Projeto1TU.Data
             return contato;
         }
 
+        public void Update(Contato contato)
+        {
+            Database db = new PetaPoco.Database("PRWDEV");
+            db.Update(contato);
+        }
+
     }
 }

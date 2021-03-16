@@ -26,5 +26,11 @@ namespace Projeto1TU.Service
             var result = new ContatoRepository();
             return result.Edit(id);
         }
+
+        public void Update(Contato contato)
+        {
+            var result = new ContatoRepository();
+            result.Update(contato);
+        }
     }
 }

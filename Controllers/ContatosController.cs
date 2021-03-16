@@ -68,8 +68,8 @@ namespace Projeto1TU.Controllers
         {
             try
             {
-                var db = new PetaPoco.Database("PRWDEV");
-                db.Update("contatosbandre", "ID", contato);
+                var contatoService = new ContatoService();
+                contatoService.Update(contato);
                 return RedirectToAction("Index");
             }
             catch
