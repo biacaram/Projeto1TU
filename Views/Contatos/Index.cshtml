@@ -9,12 +9,19 @@
 <p>Pesquisar por: </p>
 
 <select name="pesquisa" class="form-control" id="pesquisa">
-    <option value="nome">Nome</option>
-    <option value="cpf">CPF</option>
-    <option value="estado">Estado</option>
+    <option value="default" selected disabled>Selecione a categoria</option>
+    <option value="nome-query">Nome</option>
+    <option value="cpf-query">CPF</option>
+    <option value="estado-query">Estado</option>
 </select>
 <br />
-@Html.TextBox("Descricao", "", new { id = "descricao", @class = "form-control", @*style = "display: none;"*@ })
+
+@Html.TextBox("Descricao", "", new
+{
+    @class = "form-control descricao",
+    //style = "display: none;"
+})
+
 <br />
 
 <div class="row">
@@ -63,8 +70,22 @@
 {
     <script type="text/javascript">
         $('#btnPesquisa').click(function () {
-            var url = '@Url.Action("Index","Contatos")' + '?query=' + $('#descricao').val();
+            var url = '@Url.Action("Index","Contatos")' + '?query=' + $('.descricao').val();
             window.location.href = url;
         });
     </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#cpf-query").inputmask("mask", { "mask": "999.999.999-99" });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $('#pesquisa').click(() => {
+            var selecao = $("#pesquisa option:selected").val();
+            
+        })
+    </script>
+
 }
