@@ -12,9 +12,15 @@ namespace Projeto1TU.Data
         public IList<Contato> PesquisaAll(string query)
         {
             Database db = new PetaPoco.Database("PRWDEV");
-            var result = db.Fetch<Contato>("Select * FROM contatosbandre");
-
-            return result;
+            
+            if (query == null)
+            {
+               return db.Fetch<Contato>("Select * FROM contatosbandre");
+            } 
+            else
+            {
+               return db.Fetch<Contato>("Select * FROM contatosbandre WHERE nome like '%' + @query + '%' or cpf like '%' + @query + '%' or estadoid like '%' + @query + '%'", new { query });
+            }
         }
 
         public void Insert(Contato novoContato)
