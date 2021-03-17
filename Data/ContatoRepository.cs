@@ -40,7 +40,7 @@ namespace Projeto1TU.Data
         public void Update(Contato contato)
         {
             Database db = new PetaPoco.Database("PRWDEV");
-            db.Update(contato);
+            db.Update("contatosbandre", "ID", contato);
         }
 
         public void Delete(Contato contato)
