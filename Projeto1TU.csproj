@@ -145,6 +145,7 @@
     <Compile Include="Service\TesteService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Style\StyleSheet1.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -157,6 +158,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\icons8-team-dhZtNlvNE8M-unsplash.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Data\PetaPoco\Generated\PetaPoco.Core.ttinclude" />

@@ -1,0 +1,30 @@
+﻿body {
+    background-color: red;
+}
+
+.banner {
+    background-image: url('../Images/icons8-team-dhZtNlvNE8M-unsplash.jpg');
+    background-size: cover;
+    padding: 150px;
+    display: flex;
+    align-items: center;
+}
+
+    .banner h1 {
+        font-family: 'Montserrat', sans-serif;
+        color: lightslategrey;
+        font-weight: bold;
+        padding: 5px 0px;
+    }
+
+    .banner h3 {
+        font-family: 'Lora', serif;
+        font-style: italic;
+        font-weight: lighter;
+        color: lightslategrey;
+        opacity: 0.8;
+        width: fit-content();
+        border-radius: 1px;
+        padding: 5px 0px;
+        margin-bottom: 25px;
+    }
