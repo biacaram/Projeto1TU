@@ -68,24 +68,29 @@
 
 @section scripts
 {
+
+    <script type="text/javascript">
+        $('#pesquisa').click(() => {
+            var selecao = $("#pesquisa option:selected").val();
+            var elemento = $(".descricao");
+            elemento.attr("id", selecao);
+            $("#cpf-query").inputmask("mask", { "mask": "999.999.999-99" });
+            $("#nome-query").inputmask("mask", { "mask": "" });
+            $("#estado-query").inputmask("mask", { "mask": "" });
+
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        });
+    </script>
+
     <script type="text/javascript">
         $('#btnPesquisa').click(function () {
             var url = '@Url.Action("Index","Contatos")' + '?query=' + $('.descricao').val();
             window.location.href = url;
         });
-    </script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#cpf-query").inputmask("mask", { "mask": "999.999.999-99" });
-        });
-    </script>
-
-    <script type="text/javascript">
-        $('#pesquisa').click(() => {
-            var selecao = $("#pesquisa option:selected").val();
-            
-        })
     </script>
 
 }
