@@ -12,6 +12,6 @@ namespace Projeto1TU.Models
         public int EstadoID { get; set; }
 
         [Required]
-        public string Nome { get; set; }
+        public string Sigla { get; set; }
     }
 }
