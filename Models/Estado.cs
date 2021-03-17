@@ -9,7 +9,7 @@ namespace Projeto1TU.Models
     public class Estado
     {
         [Required]
-        public int ID { get; set; }
+        public int EstadoID { get; set; }
 
         [Required]
         public string Nome { get; set; }

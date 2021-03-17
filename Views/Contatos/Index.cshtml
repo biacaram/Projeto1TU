@@ -12,14 +12,13 @@
     <option value="default" selected disabled>Selecione a categoria</option>
     <option value="nome-query">Nome</option>
     <option value="cpf-query">CPF</option>
-    <option value="estado-query">Estado</option>
+    <option value="estado-query">Estado (sigla)</option>
 </select>
 <br />
 
 @Html.TextBox("Descricao", "", new
 {
     @class = "form-control descricao",
-    //style = "display: none;"
 })
 
 <br />
@@ -76,8 +75,7 @@
             elemento.attr("id", selecao);
             $("#cpf-query").inputmask("mask", { "mask": "999.999.999-99" });
             $("#nome-query").inputmask("mask", { "mask": "" });
-            $("#estado-query").inputmask("mask", { "mask": "" });
-
+            $("#estado-query").inputmask("mask", { "mask": "AA" });
         })
     </script>
 
