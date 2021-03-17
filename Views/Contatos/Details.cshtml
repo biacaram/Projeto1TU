@@ -1,4 +1,4 @@
-﻿@model Projeto1TU.Models.Contato
+﻿@model Projeto1TU.Models.ContatoViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -12,67 +12,67 @@
         <table class="table">
             <tr>
                 <td><strong>ID</strong></td>
-                <td>@Html.DisplayFor(model => model.ID)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.ID)</td>
             </tr>
             <tr>
                 <td><strong>Nome</strong></td>
-                <td>@Html.DisplayFor(model => model.Nome)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Nome)</td>
             </tr>
             <tr>
                 <td><strong>Apelido</strong></td>
-                <td>@Html.DisplayFor(model => model.Apelido)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Apelido)</td>
             </tr>
             <tr>
                 <td><strong>CPF</strong></td>
-                <td>@Html.DisplayFor(model => model.Cpf)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Cpf)</td>
             </tr>
             <tr>
                 <td><strong>Nascimento</strong></td>
-                <td>@Html.DisplayFor(model => model.Nascimento)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Nascimento)</td>
             </tr>
             <tr>
                 <td><strong>Sexo</strong></td>
-                <td>@Html.DisplayFor(model => model.Sexo)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Sexo)</td>
             </tr>
             <tr>
                 <td><strong>Telefone</strong></td>
-                <td>@Html.DisplayFor(model => model.Telefone)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Telefone)</td>
             </tr>
             <tr>
                 <td><strong>Email</strong></td>
-                <td>@Html.DisplayFor(model => model.Email)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Email)</td>
             </tr>
             <tr>
                 <td><strong>CEP</strong></td>
-                <td>@Html.DisplayFor(model => model.Cep)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Cep)</td>
             </tr>
             <tr>
                 <td><strong>Endereço</strong></td>
-                <td>@Html.DisplayFor(model => model.Endereco)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Endereco)</td>
             </tr>
             <tr>
                 <td><strong>Nº</strong></td>
-                <td>@Html.DisplayFor(model => model.Numero)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Numero)</td>
             </tr>
             <tr>
                 <td><strong>Complemento</strong></td>
-                <td>@Html.DisplayFor(model => model.Complemento)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Complemento)</td>
             </tr>
             <tr>
                 <td><strong>Bairro</strong></td>
-                <td>@Html.DisplayFor(model => model.Bairro)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Bairro)</td>
             </tr>
             <tr>
                 <td><strong>Cidade</strong></td>
-                <td>@Html.DisplayFor(model => model.Cidade)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Cidade)</td>
             </tr>
             <tr>
                 <td><strong>Estado</strong></td>
-                <td>@Html.DisplayFor(model => model.EstadoID)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.EstadoID)</td>
             </tr>
             <tr>
                 <td><strong>Ativo</strong></td>
-                <td>@Html.DisplayFor(model => model.Ativo)</td>
+                <td>@Html.DisplayFor(model => model.Cnt.Ativo)</td>
             </tr>
 
         </table>
