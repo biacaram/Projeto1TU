@@ -68,16 +68,9 @@ namespace Projeto1TU.Controllers
         [HttpPost]
         public ActionResult Edit(Contato contato)
         {
-            try
-            {
                 var contatoService = new ContatoService();
                 contatoService.Update(contato);
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
 
         // GET: Contatos/Delete/5
